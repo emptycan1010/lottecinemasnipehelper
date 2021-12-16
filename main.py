@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[101]:
-
-
 import requests
 import telegram
 import json
@@ -25,19 +19,7 @@ parameters = {"paramList": str(dic)}
 response = requests.post(url, data = parameters).json()
 print("\n")
 
-# In[102]:
-
-
-# response
-
-
-# In[103]:
-
-
 movies_response = response['PlaySeqs']['Items']
-
-
-# In[104]:
 
 
 def split_movies_by_no(response):
@@ -96,8 +78,6 @@ def get_time_table(movies):
         tuples.append(tuple)
     return tuples
 
-
-# In[105]:
 
 
 split_movies_by_no(movies_response)
